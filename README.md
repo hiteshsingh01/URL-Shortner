@@ -1,28 +1,27 @@
+# 🔗 URL Shortener Project
 
+## 📖 Overview
 
-# URL Shortener Project
+This project is a simple and efficient **URL Shortener** application that allows users to convert long URLs into short, shareable ones. It’s built with:
 
-## Overview
+* **Frontend**: HTML, CSS, JavaScript
+* **Backend**: Python with Flask
+* **Database**: MySQL
 
-This project is a simple URL Shortener application that allows users to shorten long URLs for easier sharing and management. It is built using HTML, CSS, JavaScript for the frontend, Python for the backend, and MySQL for the database.
+---
 
-## Technologies Used
+## 🚀 Features
 
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Python (Flask framework)
-- **Database**: MySQL
+* 🔗 Shorten long URLs
+* 🚀 Redirect from short URL to original URL
+* 📊 Track number of clicks for each shortened URL
 
-## Features
+---
 
-- Shorten long URLs
-- Redirect from short URLs to original URLs
-- Track number of clicks on each shortened URL
-
-## Project Structure
+## 🗂️ Project Structure
 
 ```
-URL-Shortener/
-│
+URL-Shortner/
 ├── static/
 │   ├── css/
 │   │   └── styles.css
@@ -36,46 +35,48 @@ URL-Shortener/
 └── README.md
 ```
 
-## Prerequisites
+---
 
-- Python 3.x
-- MySQL Server
-- pip (Python package installer)
+## 🛠️ Prerequisites
 
-## Installation and Setup
+* Python 3.x
+* MySQL Server
+* pip (Python package installer)
 
-### Step 1: Clone the repository
+---
 
-```bash
-git clone https://github.com/jayant77778/URL-Shortner.git
-cd url-shortener
-```
+## ⚙️ Installation & Setup
 
-### Step 2: Set up the virtual environment
+### Step 1: Clone the Repository
 
 ```bash
-python3 -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+git clone https://github.com/hiteshsingh01/URL-Shortner.git
+cd URL-Shortner
 ```
 
-### Step 3: Install required Python packages
+### Step 2: Set Up a Virtual Environment
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+### Step 3: Install Required Packages
 
 ```bash
 pip install flask flask-mysqldb
 ```
 
-### Step 4: Set up the MySQL database
+### Step 4: Configure MySQL Database
 
-1. **Start MySQL Server**:
-   Ensure your MySQL server is running.
+1. **Start MySQL Server**
+2. **Create a Database**
 
-2. **Create a Database**:
    ```sql
    CREATE DATABASE url_shortener;
    ```
+3. **Create Table Schema**
 
-3. **Import the Database Schema**:
-   Use the schema provided in the `db.sql` file or create your own:
    ```sql
    CREATE TABLE urls (
        id INT AUTO_INCREMENT PRIMARY KEY,
@@ -84,54 +85,59 @@ pip install flask flask-mysqldb
        clicks INT DEFAULT 0
    );
    ```
+4. **Update `app.py` with your MySQL credentials**
 
-4. **Configure Database Connection**:
-   Update the database configurations in `app.py` file with your database credentials:
    ```python
    app.config['MYSQL_HOST'] = 'localhost'
    app.config['MYSQL_USER'] = 'root'
-   app.config['MYSQL_PASSWORD'] = 'root'
+   app.config['MYSQL_PASSWORD'] = 'your_password'
    app.config['MYSQL_DB'] = 'url_shortener'
    ```
 
-### Step 5: Run the Application
+---
+
+### Step 5: Run the App
 
 ```bash
 python app.py
 ```
 
-### Step 6: Access the Application
-
-Open your web browser and navigate to `http://127.0.0.1:5000/`
-
-## Usage
-
-1. **Shorten a URL**:
-   - Enter a long URL into the input field on the homepage and click "Shorten URL".
-   - The application will generate a short URL and display it.
-
-2. **Redirect**:
-   - Use the generated short URL to be redirected to the original long URL.
-
-## Project Files
-
-- `app.py`: The main application file where the Flask app is created and routes are defined.
-- `static/`: Contains static files such as CSS and JavaScript.
-- `templates/`: Contains HTML template files.
-
-## Contributing
-
-If you would like to contribute to this project, please fork the repository and submit a pull request. 
-
-
-
-## Contact
-
-For any questions or support, please contact jai77bhati@gmail.com
-
-
-Linkedin- https://www.linkedin.com/in/jayant-bhati-263206259/
+Navigate to: [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
 
 ---
 
-Thank you for using our URL Shortener application!
+## 💡 How to Use
+
+1. **Shorten a URL**:
+   Paste any long URL, hit "Shorten URL", and get a short link instantly.
+
+2. **Redirect**:
+   Use the generated short URL to automatically redirect to the original long URL.
+
+3. **Track Clicks**:
+   Every time a short URL is used, its click count increases in the backend.
+
+---
+
+## 📂 Key Files
+
+* `app.py` – Main Flask backend
+* `static/` – CSS and JS files
+* `templates/` – HTML templates
+
+---
+
+## 🤝 Contributing
+
+Want to improve or add a feature?
+Feel free to **fork** this repository and submit a **pull request**.
+
+---
+
+## 📬 Contact
+
+Created by **Hitesh Singh**
+📧 Email: \[Your email here if you'd like to add it]
+🔗 LinkedIn: [https://www.linkedin.com/in/hiteshsingh01/](https://www.linkedin.com/in/hiteshsingh01/)
+
+---
